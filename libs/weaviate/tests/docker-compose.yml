@@ -1,14 +1,14 @@
 ---
-version: '3.4'
+version: "3.4"
 services:
   weaviate:
     command:
-    - --host
-    - 0.0.0.0
-    - --port
-    - '8080'
-    - --scheme
-    - http
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8080"
+      - --scheme
+      - http
     image: semitechnologies/weaviate:1.25.4
     ports:
       - "8080"
@@ -16,9 +16,8 @@ services:
     restart: on-failure:0
     environment:
       QUERY_DEFAULTS_LIMIT: 25
-      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
-      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
-      CLUSTER_HOSTNAME: 'node1'
-      LOG_LEVEL: 'debug'
-      LOG_FORMAT: 'text'
-...
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: "/var/lib/weaviate"
+      CLUSTER_HOSTNAME: "node1"
+      LOG_LEVEL: "debug"
+      LOG_FORMAT: "text"
